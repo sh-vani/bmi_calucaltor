@@ -1,0 +1,24 @@
+
+In this BMI calculator . take input from user as height and weight then with the help of the bmi funcation  calculate the body mass index . we have also creat the condition 
+for the bmi and say about the user is  underweight , normal , overweight  .
+
+def BMI():
+      h=float(Height.get())
+      w=float(Weight.get())
+      #convert height into meter
+      m=h/100
+      bmi=round(float(w/m**2),1)
+      label1.config(text=bmi)
+      if bmi<=18.5:
+            label2.config(text="Underweight!")
+            label3.config(text="You have lower weight then normal body!")
+      elif bmi>18.5 and bmi<=25:
+            label2.config(text="Normal")
+            label3.config(text="Its indicates that you are healthy!")
+      elif bmi >25 and bmi<=30:
+            label2.config(text="Overweight!")
+            label3.config(text="It indicates that a person is \n slightly overweight! \n A doctor may advise to lose some \n weight for healt reason !")
+      else :
+            label2.config(text="Obes!")
+            label3.config(text="Health may be at risk,if they do not \n lose weight ! ")
+
